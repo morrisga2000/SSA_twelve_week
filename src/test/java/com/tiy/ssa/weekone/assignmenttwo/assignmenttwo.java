@@ -30,15 +30,15 @@ public class assignmenttwo
 		else leftOver = (leftOver + changeAmount);
 		return leftOver;
 	}
-	public float powerTimeMinutes (float leftOver, float kilowattPerHour)
+	public float powerTimeMinutes (float leftOver, float kilowattPerHour)  // could have later used this.leftOver instead of calling the parameter
 	{
 		float timeMinutes;
 		timeMinutes = Math.round(leftOver / kilowattPerHour  * 60);
 		if (timeMinutes < 0)
 			timeMinutes = 0;
-		if (leftOver <= 0)
+		if (leftOver <= 0)  // ensures the time remaining is not a negative number
 			timeMinutes = 0;
-		return timeMinutes;
+		return timeMinutes; //returns minutes remaining based on burn-rate
 	}
 	
 }
