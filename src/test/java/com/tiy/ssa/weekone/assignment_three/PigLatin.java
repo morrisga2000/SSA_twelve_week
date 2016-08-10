@@ -46,7 +46,11 @@ public class PigLatin
         if (word.startsWith("a") || word.startsWith("e") || word.startsWith("i") || word.startsWith("o") || word.startsWith("u"))
              	   pigLatin2 += word + " ";
              	   else if (! word.startsWith("a") && ! word.startsWith("e") && ! word.startsWith("i") && ! word.startsWith("o") && ! word.startsWith("u"))  
-             		   pigLatin2 += word.substring(1).replace("ay", "") + (word.substring(0,1)+"ay ");
+             	   {
+             		   int placement = word.length() - 2;
+             		  pigLatin2 += word.substring(1, placement) + (word.substring(0,1)+"ay ");
+             		 //  pigLatin2 += word.substring(1).replace("ay", "") + (word.substring(0,1)+"ay ");
+             	   }
              	  else
                       pigLatin2 += word + " ";
         }

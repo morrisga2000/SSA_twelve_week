@@ -10,6 +10,7 @@ public class pig_latin_tests
 	@Test
 	public void test()
 	{
+		assertEquals("", "no idea", new PigLatin("played sprayed spayed hay die with me too") .translateWord());
 	assertEquals("", "no idea", new PigLatin("screaming schools spell the phosphorus die with me too") .translateWord());
 	}
 }
